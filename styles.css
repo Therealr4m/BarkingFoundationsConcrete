@@ -195,13 +195,6 @@ font-size: 2rem;
 }
 
 
-
-
-
-
-
-
-
 /* =========================================
    TRUST BAR (MINIMAL PREMIUM STYLE)
 ========================================= */
@@ -335,6 +328,14 @@ font-size: 2rem;
 .section h2 {
   text-align: center;
   margin-bottom: 22px;
+  color: #4b0082;
+  text-shadow: #111111;
+}
+/* purple headings */
+.section h3 {
+color: #4b0082;
+text-shadow: #111111
+
 }
 
 .section p {
@@ -973,3 +974,89 @@ font-size: 2rem;
 
 }
 
+
+/* =========================================
+   COMMERCIAL CONCRETE SECTION
+========================================= */
+
+.commercial-concrete-section {
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8f5ff 100%
+    );
+}
+
+.commercial-concrete-container {
+
+  max-width: 1020px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(75,0,130,0.10);
+
+  border-radius: 26px;
+
+  padding: 70px;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.06);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* subtle background glow */
+.commercial-concrete-container::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 340px;
+  height: 340px;
+
+  border-radius: 50%;
+
+  background: rgba(75,0,130,0.04);
+
+  top: -120px;
+  right: -100px;
+
+  filter: blur(10px);
+}
+
+.commercial-concrete-container h2 {
+  margin-bottom: 28px;
+}
+
+.commercial-concrete-container h3 {
+
+  margin-top: 42px;
+  margin-bottom: 16px;
+
+  text-align: left;
+}
+
+.commercial-concrete-container p {
+
+  font-size: 1.03rem;
+
+  line-height: 1.9;
+
+  color: #333333;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+  .commercial-concrete-container {
+
+    padding: 40px 24px;
+
+    border-radius: 20px;
+  }
+
+}
