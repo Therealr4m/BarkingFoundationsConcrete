@@ -446,6 +446,18 @@ text-shadow: #111111
   color: #f1f1f1;
   max-width: 720px;
   margin: 0 auto 14px;
+  font-weight: 535;
+}
+
+.hero-content h2{
+
+  color: #f1f1f1;
+  font-weight: 900;
+}
+
+.hero-content h3{
+  color: #f1f1f1;
+  font-weight: 800;
 }
 
 /* mobile refinement */
