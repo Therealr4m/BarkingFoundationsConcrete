@@ -1,0 +1,975 @@
+/* =========================================
+   BASE DESIGN SYSTEM
+========================================= */
+
+:root {
+  --primary: #ffffff;
+  --secondary: #4b0082; /* your purple */
+  --text: #111111;
+  --muted: #555555;
+
+  --soft-bg: #f7f5ff;
+  --border: rgba(75, 0, 130, 0.15);
+
+  --radius: 14px;
+  --radius-lg: 22px;
+
+  --shadow-sm: 0 6px 18px rgba(0,0,0,0.06);
+  --shadow-md: 0 18px 45px rgba(0,0,0,0.10);
+
+  --max: 1180px;
+}
+
+/* =========================================
+   RESET / BASE
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--primary);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+/* =========================================
+   CONTAINER SYSTEM
+========================================= */
+
+.container {
+  width: 92%;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1, h2, h3 {
+  line-height: 1.2;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+p {
+  color: var(--text);
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* =========================================
+   SECTIONS (WIX STYLE SPACING)
+========================================= */
+
+.intro-section{
+  text-align: center;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.section:nth-child(even) {
+  background: var(--soft-bg);
+}
+
+/* =========================================
+   HERO (STATIC IMAGE FEEL OPTION READY)
+========================================= */
+
+.hero {
+  padding: 100px 0 70px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f7f5ff 100%
+  );
+}
+
+.hero h1 {
+  margin-bottom: 18px;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 0 auto 14px;
+  color: var(--muted);
+}
+
+
+
+/* =========================================
+CONCRETE SUPPLY HERO SECTION
+========================================= */
+
+.concrete-supply-hero {
+min-height: 68vh;
+}
+
+/* slightly softer overlay than main hero */
+.concrete-supply-overlay {
+background:
+linear-gradient(
+180deg,
+rgba(20,20,20,0.52),
+rgba(20,20,20,0.58)
+);
+}
+
+/* tighter readable content width */
+.concrete-supply-hero .hero-content {
+max-width: 940px;
+}
+
+/* heading spacing */
+.concrete-supply-hero h2 {
+color: #ffffff;
+
+margin-bottom: 26px;
+
+font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* premium readable copy */
+.concrete-supply-hero p {
+color: rgba(255,255,255,0.94);
+
+max-width: 860px;
+
+font-size: 1.04rem;
+
+line-height: 1.9;
+}
+
+/* mobile refinement */
+@media (max-width: 768px) {
+
+.concrete-supply-hero {
+min-height: 58vh;
+}
+
+.concrete-supply-hero h2 {
+font-size: 2rem;
+}
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   TRUST BAR (MINIMAL PREMIUM STYLE)
+========================================= */
+
+.trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 18px 10px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
+  background: #fff;
+}
+
+.trust-item {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+/* =========================================
+   NAVIGATION (HAMBURGER CLEAN WIX STYLE)
+========================================= */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 5%;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-brand {
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* hamburger dropdown */
+.site-nav {
+  position: relative;
+}
+
+.site-nav-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.site-nav-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 120%;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow-md);
+
+  width: 240px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 8px 0;
+}
+
+.nav-dropdown-menu a {
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.nav-dropdown-menu a:hover {
+  background: var(--soft-bg);
+  color: var(--secondary);
+}
+
+/* =========================================
+   CTA BUTTONS
+========================================= */
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+
+  background: var(--secondary);
+  color: #fff;
+
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   INTERNAL LINKS (BLUE SYSTEM YOU WANTED)
+========================================= */
+
+.internal-link {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.internal-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   SECTION HEADERS
+========================================= */
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.section p {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   SERVICE LIST BLOCKS
+========================================= */
+
+.section ul {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   CTA SECTION FINAL
+========================================= */
+
+.section:last-of-type {
+  text-align: center;
+}
+
+/* =========================================
+   MOBILE OPTIMISATION
+========================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 80px 0 50px;
+  }
+
+  .trust-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-dropdown-menu {
+    width: 100%;
+    right: auto;
+    left: 0;
+  }
+
+  .section {
+    padding: 50px 0;
+  
+  }
+}
+
+.section h3{
+  text-align: center;
+}
+
+/* =========================================
+   HERO (IMAGE IN HTML SYSTEM)
+========================================= */
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  overflow: hidden;
+}
+
+/* background image */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 0;
+}
+
+/* dark overlay for readability */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.45);
+
+  z-index: 1;
+}
+
+/* content sits above everything */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* text styling */
+.hero-content h1 {
+  color: #fff;
+}
+
+.hero-content p {
+  color: #f1f1f1;
+  max-width: 720px;
+  margin: 0 auto 14px;
+}
+
+/* mobile refinement */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+}
+
+
+.image-overlay-light .section-bg-overlay {
+
+  background:
+
+    linear-gradient(
+
+      180deg,
+
+      rgba(148, 146, 146, 0.78),
+
+      rgba(56, 54, 54, 0.72)
+
+    );
+}
+
+
+/* softer glass card */
+
+.image-overlay-light .container {
+
+  background: rgba(0, 0, 0, 0.62);
+
+  border: 1px solid rgba(75,0,130,0.12);
+
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,0.10);
+
+
+}
+
+
+/* =========================================
+   PROOF OF WORK GRID
+========================================= */
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  margin-top: 50px;
+}
+
+.proof-grid img {
+  width: 100%;
+  height: 320px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  border: 3px solid rgba(75, 0, 130, 0.22);
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.10),
+    0 0 0 1px rgba(75, 0, 130, 0.08);
+
+  transition: 0.35s ease;
+
+  background: #fff;
+}
+
+.proof-grid img:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(75, 0, 130, 0.45);
+
+  box-shadow:
+    0 22px 60px rgba(0,0,0,0.16),
+    0 0 0 1px rgba(75, 0, 130, 0.18);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+  .proof-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .proof-grid img {
+    height: 250px;
+  }
+
+}
+
+
+/* =========================================
+   PREMIUM STATS / AUTHORITY SECTION
+========================================= */
+
+.section-dark-stats {
+  background:
+    linear-gradient(
+      135deg,
+      #1f012f 0%,
+      #2d0144 45%,
+      #4b0082 100%
+    );
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle luxury glow */
+.section-dark-stats::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -200px;
+  right: -120px;
+
+  background: rgba(255,255,255,0.04);
+
+  border-radius: 50%;
+
+  filter: blur(10px);
+}
+
+.section-dark-stats h2 {
+  color: #fff;
+  margin-bottom: 55px;
+}
+
+/* stats layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* individual boxes */
+.stat-box {
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.10);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 22px;
+
+  padding: 40px 24px;
+
+  text-align: center;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.20);
+
+  transition: 0.3s ease;
+}
+
+/* hover feel */
+.stat-box:hover {
+  transform: translateY(-8px);
+
+  background: rgba(255,255,255,0.12);
+
+  border-color: rgba(255,255,255,0.18);
+}
+
+/* large numbers */
+.stat-box h3 {
+  font-size: 3rem;
+  font-weight: 800;
+
+  margin-bottom: 12px;
+
+  color: #ffffff;
+
+  letter-spacing: -0.04em;
+}
+
+/* text */
+.stat-box p {
+  color: rgba(255,255,255,0.82);
+
+  font-size: 0.98rem;
+
+  max-width: 220px;
+
+  margin: 0 auto;
+
+  line-height: 1.5;
+}
+
+/* mobile */
+@media (max-width: 900px) {
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box {
+    padding: 34px 20px;
+  }
+
+  .stat-box h3 {
+    font-size: 2.5rem;
+  }
+
+}
+
+
+/* =========================================
+   IMAGE OVERLAY CONTENT SECTION
+   (REUSABLE SYSTEM)
+========================================= */
+
+.image-overlay-section {
+  position: relative;
+  overflow: hidden;
+
+  padding: 100px 0;
+
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* background image */
+.section-bg-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 0;
+}
+
+/* dark overlay for readability */
+.section-bg-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(10,10,10,0.82),
+      rgba(20,20,20,0.74)
+    );
+
+  z-index: 1;
+}
+
+/* content above image */
+.section-overlay-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* white typography */
+.image-overlay-section h2,
+.image-overlay-section h3 {
+  color: #ffffff;
+}
+
+.image-overlay-section p {
+  color: rgba(255,255,255,0.88);
+}
+
+/* spacing improvement */
+.image-overlay-section h3 {
+  margin-top: 42px;
+}
+
+/* subtle luxury glass effect */
+.image-overlay-section .container {
+  background: rgba(255,255,255,0.04);
+
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 24px;
+
+  padding: 60px;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.35);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+  .image-overlay-section {
+    padding: 70px 0;
+  }
+
+  .image-overlay-section .container {
+    padding: 34px 22px;
+    border-radius: 18px;
+  }
+
+}
+
+
+
+
+
+/* =========================================
+ HOMEPAGE INSTALLATION  PROCESS SECTION
+========================================= */
+
+.process-section {
+  position: relative;
+}
+
+.process-intro {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* cards */
+.process-card {
+  position: relative;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(75, 0, 130, 0.10);
+
+  border-radius: 22px;
+
+  padding: 38px 30px;
+
+  min-height: 190px;
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,0.06);
+
+  transition: 0.3s ease;
+
+  overflow: hidden;
+}
+
+/* subtle top accent line */
+.process-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(75,0,130,1),
+      rgba(75,0,130,0.35)
+    );
+}
+
+/* hover */
+.process-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.10);
+}
+
+/* numbers */
+.process-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 50%;
+
+  background: rgba(75,0,130,0.08);
+
+  color: var(--secondary);
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  margin-bottom: 22px;
+}
+
+/* headings */
+.process-card h3 {
+  text-align: left;
+
+  font-size: 1.08rem;
+
+  line-height: 1.5;
+
+  margin: 0;
+
+  color: var(--text);
+}
+
+/* mobile */
+@media (max-width: 900px) {
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-card {
+    min-height: auto;
+  }
+
+}
+
+
+
+/* =========================================
+   TRUSTED CONTRACTOR SECTION
+========================================= */
+
+.trusted-contractor-section {
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8f5ff 100%
+    );
+}
+
+.trusted-contractor-container {
+  max-width: 980px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(75,0,130,0.10);
+
+  border-radius: 26px;
+
+  padding: 70px;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.06);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* subtle purple glow */
+.trusted-contractor-container::before {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  border-radius: 50%;
+
+  background: rgba(75,0,130,0.04);
+
+  top: -120px;
+  right: -80px;
+
+  filter: blur(10px);
+}
+
+.trusted-contractor-container h2 {
+  margin-bottom: 28px;
+}
+
+.trusted-contractor-container p {
+  font-size: 1.04rem;
+
+  line-height: 1.9;
+
+  color: #333333;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+  .trusted-contractor-container {
+    padding: 40px 24px;
+    border-radius: 20px;
+  }
+
+}
+
