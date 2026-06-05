@@ -11,46 +11,48 @@
 <body>
 
 
-
-<!-- =========================
-NAVIGATION (HAMBURGER READY)
-========================= -->
-
-<header class="site-header">
+  <header class="site-header">
   <div class="site-brand">
     Residential Concrete Barking
   </div>
-
-  <nav class="site-nav">
-    <details class="site-nav-dropdown">
-      <summary class="site-nav-link">
-        Menu <span class="nav-arrow">▾</span>
-      </summary>
-
-      <div class="nav-dropdown-menu">
-
-        <a href="/">Home</a>
-
-        <a href="/residential-concrete-foundations-barking.html">Concrete Foundations Barking</a>
-
-        <a href="/concrete-slabs-barking.html">Concrete Slabs</a>
-
-        <a href="/concrete-base-installation-barking.html">Concrete Base Installation</a>
-
-        <a href="/structural-concrete-barking.html">Structural Concrete</a>
-
-        <a href="/reinforced-concrete-barking.html">Reinforced Concrete</a>
-
-        <a href="/garage-foundations-barking.html">Garage Foundations</a>
-
-        <a href="/shed-bases-barking.html">Shed Bases</a>
-
-        <a href="/contact.html">Contact</a>
-
-      </div>
-    </details>
-  </nav>
+  <button id="menu-toggle" class="menu-toggle">
+    ☰
+  </button>
 </header>
+<div id="menu-overlay" class="menu-overlay"></div>
+<nav id="side-menu" class="side-menu">
+  <button id="menu-close" class="menu-close">
+    ×
+  </button>
+  <a href="/">Home</a>
+  <details>
+    <summary>Residential Services</summary>
+    <a href="/index.html">Summer-house base installation</a>
+    <a href="#">Concrete Shed bases</a>
+    <a href="#">Garden Office bases</a>
+    <a href="#">Log cabin bases</a>
+    <a href="#">Workshop Bases</a>
+    <a href="#">Garden room bases</a>
+    <a href="#">Hot tub bases</a>
+    <a href="#">Garage Foundations</a>
+    <a href="#">Outbuilding Foundations</a>
+
+  </details>
+  <details>
+    <summary>Commercial Services</summary>
+    <a href="#">Storage unit foundations</a>
+    <a href="#">Business Warehouse Bases</a>
+  </details>
+  <details>
+    <summary>Locations</summary>
+    <a href="#">Barking</a>
+    <a href="#">Dagenham</a>
+    <a href="#">Ilford</a>
+    <a href="#">Romford</a>
+  </details>
+  <a href="/blog.html">Guides</a>
+  <a href="/contact.html">Contact</a>
+</nav>
 
 
 <section class="hero">
@@ -725,5 +727,6 @@ FINAL CTA
   </div>
 </section>
 
+<script src="nav.js"></script>
 </body>
 </html>

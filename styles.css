@@ -218,74 +218,6 @@ font-size: 2rem;
   color: var(--secondary);
 }
 
-/* =========================================
-   NAVIGATION (HAMBURGER CLEAN WIX STYLE)
-========================================= */
-
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 18px 5%;
-  background: #fff;
-  border-bottom: 1px solid var(--border);
-
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.site-brand {
-  font-weight: 800;
-  color: var(--text);
-}
-
-/* hamburger dropdown */
-.site-nav {
-  position: relative;
-}
-
-.site-nav-dropdown summary {
-  list-style: none;
-  cursor: pointer;
-  font-weight: 700;
-  color: var(--secondary);
-}
-
-.site-nav-dropdown summary::-webkit-details-marker {
-  display: none;
-}
-
-.nav-dropdown-menu {
-  position: absolute;
-  right: 0;
-  top: 120%;
-
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-
-  box-shadow: var(--shadow-md);
-
-  width: 240px;
-
-  display: flex;
-  flex-direction: column;
-
-  padding: 8px 0;
-}
-
-.nav-dropdown-menu a {
-  padding: 10px 14px;
-  font-size: 0.95rem;
-  color: var(--text);
-}
-
-.nav-dropdown-menu a:hover {
-  background: var(--soft-bg);
-  color: var(--secondary);
-}
 
 /* =========================================
    CTA BUTTONS
@@ -313,7 +245,7 @@ font-size: 2rem;
 ========================================= */
 
 .internal-link {
-  color: #2563eb;
+  color: #063aaa;
   font-weight: 600;
 }
 
@@ -1071,4 +1003,142 @@ text-shadow: #111111
     border-radius: 20px;
   }
 
+}
+
+/* =========================
+HAMBURGER BUTTON
+========================= */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  font-size: 34px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.menu-toggle:hover {
+  opacity: 0.8;
+}
+/* =========================
+OVERLAY
+========================= */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s ease;
+  z-index: 9998;
+}
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+/* =========================
+SIDE MENU
+========================= */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -360px;
+  width: 350px;
+  max-width: 90%;
+  height: 100vh;
+  background: var(--primary);
+  overflow-y: auto;
+  transition: .3s ease;
+  z-index: 9999;
+  box-shadow: var(--shadow-md);
+  padding: 28px;
+  border-right: 1px solid var(--border);
+}
+.side-menu.open {
+  left: 0;
+}
+/* =========================
+CLOSE BUTTON
+========================= */
+.menu-close {
+  background: none;
+  border: none;
+  font-size: 34px;
+  color: var(--secondary);
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+/* =========================
+LINKS
+========================= */
+.side-menu a {
+  display: block;
+  padding: 14px 0;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  transition: .2s ease;
+}
+.side-menu a:hover {
+  color: var(--secondary);
+  padding-left: 8px;
+}
+/* =========================
+SECTION HEADERS
+========================= */
+.side-menu details {
+  margin: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.side-menu summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  color: var(--secondary);
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.side-menu summary::-webkit-details-marker {
+  display: none;
+}
+.side-menu summary::after {
+  content: "+";
+  font-size: 20px;
+}
+.side-menu details[open] summary::after {
+  content: "−";
+}
+/* =========================
+SUB LINKS
+========================= */
+.side-menu details a {
+  padding: 12px 0 12px 16px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.side-menu details a:hover {
+  color: var(--secondary);
+}
+/* =========================
+BRAND AREA
+========================= */
+.side-menu-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--border);
+}
+/* =========================
+SCROLLBAR
+========================= */
+.side-menu::-webkit-scrollbar {
+  width: 8px;
+}
+.side-menu::-webkit-scrollbar-thumb {
+  background: rgba(75,0,130,.25);
+  border-radius: 20px;
 }
