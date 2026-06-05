@@ -1,7 +1,6 @@
 /* =========================================
    BASE DESIGN SYSTEM
 ========================================= */
-
 :root {
   --primary: #ffffff;
   --secondary: #4b0082; /* your purple */
@@ -997,12 +996,9 @@ text-shadow: #111111
 @media (max-width: 768px) {
 
   .commercial-concrete-container {
-
     padding: 40px 24px;
-
     border-radius: 20px;
   }
-
 }
 
 /* =========================
@@ -1132,6 +1128,13 @@ BRAND AREA
   padding-bottom: 15px;
   border-bottom: 2px solid var(--border);
 }
+
+.site-brand{
+  margin-left: 10px;
+  font-weight: 750;
+  color: #4b0082;
+}
+
 /* =========================
 SCROLLBAR
 ========================= */
@@ -1141,4 +1144,52 @@ SCROLLBAR
 .side-menu::-webkit-scrollbar-thumb {
   background: rgba(75,0,130,.25);
   border-radius: 20px;
+}
+
+
+/* =========================
+FOOTER
+========================= */
+.site-footer {
+  background: #111;
+  color: #fff;
+  margin-top: 80px;
+  padding-top: 60px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+  gap: 40px;
+}
+.footer-column h3 {
+  color: var(--secondary);
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+}
+.footer-column p {
+  color: rgba(255,255,255,.8);
+  line-height: 1.7;
+}
+.footer-column a {
+  display: block;
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: .2s ease;
+}
+.footer-column a:hover {
+  color: white;
+  padding-left: 6px;
+}
+.footer-bottom {
+  margin-top: 50px;
+  padding: 25px 0;
+  border-top: 1px solid rgba(255,255,255,.1);
+  text-align: center;
+}
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255,255,255,.7);
+  font-size: .9rem;
 }

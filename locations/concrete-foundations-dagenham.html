@@ -16,29 +16,47 @@
 <!-- =========================
 HEADER
 ========================= -->
-
-<header class="site-header">
+  <header class="site-header">
   <div class="site-brand">
-    Residential Concrete Dagenham
+   <a href="/index.html">Residential Concrete Barking</a> 
   </div>
-
-  <nav class="site-nav">
-    <details class="site-nav-dropdown">
-      <summary class="site-nav-link">
-        Menu <span class="nav-arrow">▾</span>
-      </summary>
-
-      <div class="nav-dropdown-menu">
-        <a href="/">Home</a>
-        <a href="/residential-concrete-foundations-dagenham.html">Concrete Foundations Dagenham</a>
-        <a href="/concrete-slabs-dagenham.html">Concrete Slabs</a>
-        <a href="/concrete-base-installation-dagenham.html">Concrete Base Installation</a>
-        <a href="/contact.html">Contact</a>
-      </div>
-    </details>
-  </nav>
+  <button id="menu-toggle" class="menu-toggle">
+    ☰
+  </button>
 </header>
+<div id="menu-overlay" class="menu-overlay"></div>
+<nav id="side-menu" class="side-menu">
+  <button id="menu-close" class="menu-close">
+    ×
+  </button>
+  <a href="/">Home</a>
+  <details>
+    <summary>Residential Services</summary>
+    <a href="/index.html">Summerhouse base</a>
+    <a href="#">Concrete Shed base</a>
+    <a href="#">Garden Office base</a>
+    <a href="#">Log cabin base</a>
+    <a href="#">Workshop base</a>
+    <a href="#">Garden room base</a>
+    <a href="#">Hot tub bases</a>
+    <a href="#">Garage Foundations</a>
+    <a href="#">Outbuilding Foundations</a>
 
+  </details>
+  <details>
+    <summary>Commercial Services</summary>
+    <a href="#">Storage unit foundations</a>
+    <a href="#">Business Warehouse Bases</a>
+  </details>
+  <details>
+    <summary>Locations</summary>
+    <a href="/locations/concrete-foundations-dagenham.html">Dagenham</a>
+    <a href="#">Ilford</a>
+    <a href="#">Romford</a>
+  </details>
+  <a href="/blog.html">Guides</a>
+  <a href="/contact.html">Contact</a>
+</nav>
 
 
 <section class="hero">
@@ -318,9 +336,66 @@ FINAL CTA
     </p>
 
     <a href="/contact.html" class="btn">Get a Concrete Foundation Quote</a>
+    <a href="mailto:enquiries.pillar@gmail.com" class="btn" >Email your Foundation enquiries</a>
+
+  
 
   </div>
 </section>
 
+
+<!-- =========================
+FOOTER
+========================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <!-- Brand -->
+    <div class="footer-column">
+      <h3>Residential Concrete Barking</h3>
+      <p>
+        Specialist residential and light commercial concrete foundation installers serving Barking, Dagenham and surrounding East London areas.
+      </p>
+    </div>
+    <!-- Residential -->
+    <div class="footer-column">
+      <h3>Residential Services</h3>
+     <a href="/index.html">Summerhouse base</a>
+    <a href="#">Concrete Shed base</a>
+    <a href="#">Garden Office base</a>
+    <a href="#">Log cabin base</a>
+    <a href="#">Workshop Base</a>
+    <a href="#">Garden room base</a>
+    <a href="#">Hot tub base</a>
+    <a href="#">Garage Foundation</a>
+    <a href="#">Outbuilding Foundation</a>
+
+    </div>
+    <!-- Commercial -->
+    <div class="footer-column">
+      <h3>Commercial Services</h3>
+    <summary>Commercial Services</summary>
+    <a href="#">Storage unit foundations</a>
+    <a href="#">Business Warehouse Bases</a>
+
+    </div>
+    <!-- Locations -->
+    <div class="footer-column">
+      <h3>Areas Covered</h3>
+    <a href="/locations/concrete-foundations-dagenham.html">Dagenham</a>
+    <a href="#">Ilford</a>
+    <a href="#">Romford</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>
+      © 2026 Residential Concrete Barking. All Rights Reserved.
+    </p>
+  </div>
+</footer>
+
+ 
+
+<script src="/nav.js"></script>
 </body>
 </html>
