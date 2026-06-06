@@ -105,10 +105,84 @@ li {
 
 .section {
   padding: 70px 0;
+  text-align: center;
 }
 
-.section:nth-child(even) {
-  background: var(--soft-bg);
+
+/* =========================================
+
+HELPFUL LINKS SECTION
+
+========================================= */
+
+
+
+.section-guides {
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%
+    #f8f5ff 100%
+
+  );
+
+  border: 1px solid rgba(75,0,130,0.12);
+
+  border-radius: 24px;
+
+  padding: 50px 35px;
+
+  margin: 70px auto;
+
+  max-width: 980px;
+
+  text-align: center;
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle purple glow */
+.section-guides::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+
+  height: 280px;
+
+  border-radius: 50%;
+  background: rgba(75,0,130,0.04);
+  top: -120px;
+  right: -80px;
+  filter: blur(10px);
+}
+
+.section-guides h2 {
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+
+.section-guides p {
+  max-width: 760px;
+  margin: 0 auto 18px;
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+
+  .section-guides {
+    margin: 40px auto;
+    padding: 35px 22px;
+    border-radius: 18px;
+
+  }
+
 }
 
 /* =========================================
@@ -508,6 +582,8 @@ text-shadow: #111111
   position: relative;
   overflow: hidden;
 }
+
+
 
 /* subtle luxury glow */
 .section-dark-stats::before {
@@ -1079,6 +1155,14 @@ LINKS
   color: var(--secondary);
   padding-left: 8px;
 }
+
+.helpful-guides{
+list-style-position: inside;
+text-align: center;
+font-weight: 700;
+color: #03153d;
+}
+
 /* =========================
 SECTION HEADERS
 ========================= */
@@ -1193,3 +1277,15 @@ FOOTER
   color: rgba(255,255,255,.7);
   font-size: .9rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
