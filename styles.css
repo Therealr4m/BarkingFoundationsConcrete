@@ -1163,6 +1163,13 @@ font-weight: 700;
 color: #03153d;
 }
 
+
+.bullet-points{
+  list-style-position: inside;
+  text-align: center;
+  font-weight: 520;
+}
+
 /* =========================
 SECTION HEADERS
 ========================= */
