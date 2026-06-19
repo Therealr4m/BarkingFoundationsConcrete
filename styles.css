@@ -56,6 +56,10 @@ a {
   margin: 0 auto;
 }
 
+.container li{
+list-style-position: inside;
+}
+
 /* =========================================
    TYPOGRAPHY
 ========================================= */
