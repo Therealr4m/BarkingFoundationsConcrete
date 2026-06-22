@@ -1291,6 +1291,182 @@ FOOTER
 
 
 
+/* =========================================
+   WHY US AUTHORITY SECTION
+========================================= */
+
+.why-us-section {
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8f5ff 100%
+    );
+}
+
+
+.why-us-container {
+
+  max-width: 900px;
+
+  background: #fff;
+
+  border: 1px solid rgba(75,0,130,0.12);
+
+  border-radius: 24px;
+
+  padding: 55px 50px;
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,0.08);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* subtle premium glow */
+.why-us-container::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  right: -100px;
+  top: -100px;
+
+  background:
+    rgba(75,0,130,0.05);
+
+  border-radius: 50%;
+
+  filter: blur(15px);
+
+}
+
+
+/* heading */
+.why-us-container h2 {
+
+  margin-bottom: 35px;
+
+}
+
+
+/* list */
+.why-us-list {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+
+  display: grid;
+
+  gap: 18px;
+
+}
+
+
+/* trust cards */
+.why-us-list li {
+
+  background: #ffffff;
+
+  border: 1px solid rgba(75,0,130,0.10);
+
+  border-radius: 14px;
+
+  padding: 18px 22px 18px 55px;
+
+  text-align: left;
+
+  position: relative;
+
+  font-size: 1rem;
+
+  box-shadow:
+    0 8px 22px rgba(0,0,0,0.04);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+
+}
+
+
+/* premium tick */
+.why-us-list li::before {
+
+  content: "✓";
+
+  position: absolute;
+
+  left: 20px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 24px;
+
+  height: 24px;
+
+  background: #4b0082;
+
+  color: white;
+
+  border-radius: 50%;
+
+  font-weight: 800;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 0.85rem;
+
+}
+
+/* subtle movement */
+.why-us-list li:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 30px rgba(75,0,130,0.12);
+}
+
+.why-us-list strong {
+  color: #4b0082;
+}
+
+/* mobile */
+@media (max-width:768px) {
+
+  .why-us-container {
+  padding: 35px 22px;
+    border-radius: 18px;
+
+  }
+
+  .why-us-list li {
+
+    padding:
+      18px 18px 18px 50px;
+
+    font-size: 0.95rem;
+
+  }
+
+
+}
+
 
 
 
