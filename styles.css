@@ -1237,6 +1237,33 @@ BRAND AREA
   color: #4b0082;
 }
 
+/* =========================================
+FIXED HEADER
+========================================= */
+
+.site-header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+
+  z-index: 9997;
+
+  background: #ffffff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 30px;
+
+  border-bottom: 1px solid rgba(75,0,130,0.10);
+
+  box-shadow:
+    0 6px 20px rgba(0,0,0,0.06);
+}
+
+
 /* =========================
 SCROLLBAR
 ========================= */
