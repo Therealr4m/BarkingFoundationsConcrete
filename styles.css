@@ -1324,7 +1324,6 @@ FOOTER
 }
 
 
-
 /* =========================================
    WHY US AUTHORITY SECTION
 ========================================= */
@@ -1947,3 +1946,101 @@ LOCAL TRUST SECTION
   }
 }
 
+
+
+
+.installation-gallery {
+  padding: 80px 0;
+  background: #f8f5ff;
+}
+
+.installation-gallery h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.installation-timeline {
+  width: 92%;
+  max-width: 1300px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.timeline-item {
+  position: relative;
+  flex: 1;
+  min-width: 170px;
+}
+
+.timeline-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.10);
+
+  transition: 0.3s;
+}
+
+.timeline-item img:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 22px 55px rgba(0,0,0,0.18);
+}
+
+/* connecting lines */
+
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+
+  top: 50%;
+  right: -14px;
+
+  width: 28px;
+  height: 3px;
+
+  background: #4b0082;
+
+  transform: translateY(-50%);
+}
+
+/* mobile */
+
+@media (max-width: 900px) {
+
+  .installation-timeline {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .timeline-item img {
+    height: 260px;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    width: 3px;
+    height: 35px;
+
+    top: auto;
+    bottom: -35px;
+
+    left: 50%;
+    right: auto;
+
+    transform: translateX(-50%);
+  }
+}
