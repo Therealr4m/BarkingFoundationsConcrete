@@ -2105,7 +2105,6 @@ LOCAL TRUST SECTION
 /* =========================================
    MOBILE
 ========================================= */
-
 @media(max-width:600px){
 
   .local-trust{
@@ -2119,7 +2118,7 @@ LOCAL TRUST SECTION
   }
 
   .trust-stars{
-    font-size:15px;
+    font-size:14px;
     letter-spacing:1.5px;
   }
 
@@ -2128,7 +2127,7 @@ LOCAL TRUST SECTION
   }
 
   .trust-text{
-    font-size:13px;
+    font-size:12px;
     
   }
 
