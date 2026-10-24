@@ -4509,3 +4509,40 @@ LOCAL TRUST SECTION
 @media (prefers-reduced-motion: reduce) {
   .concrete-service-card, .concrete-service-btn { transition: none; }
 }
+/* -----------------------------------------------------
+   BARKING BRAND LOGO — site-wide header presentation
+   Brand text, heading hierarchy and navigation unchanged.
+----------------------------------------------------- */
+.site-header .site-brand > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.site-header .site-brand .barking-header-logo {
+  display: block;
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 10px 14px;
+  }
+
+  .site-header .site-brand > a {
+    gap: 0.45rem;
+    font-size: clamp(0.75rem, 3.1vw, 0.95rem);
+  }
+
+  .site-header .site-brand .barking-header-logo {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+}
+
