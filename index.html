@@ -481,6 +481,150 @@
 
 
 
+<!-- ==========================================
+     FOUNDATION PROJECT PLANNER
+========================================== -->
+
+<section class="cfp-planner" id="foundation-project-planner">
+  <div class="cfp-container">
+
+    <div class="cfp-heading">
+      <span class="cfp-eyebrow">FREE PROJECT PLANNING TOOL</span>
+
+      <h2>Concrete Foundation Project Planner</h2>
+
+      <p>
+        Planning an extension, garage or new foundation?
+        Tell us a little about the project and get an instant
+        overview of what needs considering before work begins.
+      </p>
+    </div>
+
+    <div class="cfp-panel">
+
+      <div class="cfp-form">
+
+        <!-- PROJECT TYPE -->
+        <div class="cfp-field">
+          <label for="cfp-project">What are you building?</label>
+
+          <select id="cfp-project">
+            <option value="extension">House Extension</option>
+            <option value="garage">Garage / Workshop</option>
+            <option value="outbuilding">Garden Building / Outbuilding</option>
+            <option value="commercial">Light Commercial Building</option>
+            <option value="other">Other Structure</option>
+          </select>
+        </div>
+
+        <!-- FOUNDATION TYPE -->
+        <div class="cfp-field">
+          <label for="cfp-foundation">Foundation type</label>
+
+          <select id="cfp-foundation">
+            <option value="unsure">Not Sure Yet</option>
+            <option value="strip">Strip Foundations</option>
+            <option value="trench">Trench Fill Foundations</option>
+            <option value="slab">Reinforced Concrete Slab</option>
+            <option value="other">Other / Engineer-Specified</option>
+          </select>
+
+          <small class="cfp-hint">
+            If you haven't got plans yet, select "Not Sure Yet".
+          </small>
+        </div>
+
+        <!-- DIMENSIONS -->
+        <div class="cfp-field-row">
+
+          <div class="cfp-field">
+            <label for="cfp-length">Project Length (metres)</label>
+
+            <input
+              id="cfp-length"
+              type="number"
+              min="0.1"
+              max="100"
+              step="any"
+              inputmode="decimal"
+              placeholder="e.g. 4"
+            >
+          </div>
+
+          <div class="cfp-field">
+            <label for="cfp-width">Project Width (metres)</label>
+
+            <input
+              id="cfp-width"
+              type="number"
+              min="0.1"
+              max="100"
+              step="any"
+              inputmode="decimal"
+              placeholder="e.g. 3"
+            >
+          </div>
+
+        </div>
+
+        <p class="cfp-hint cfp-dimension-note">
+          Approximate overall footprint, not the foundation trench dimensions.
+        </p>
+
+        <!-- GROUND -->
+        <div class="cfp-field">
+          <label for="cfp-ground">What is the ground like?</label>
+
+          <select id="cfp-ground">
+            <option value="unknown">Not Sure</option>
+            <option value="level">Fairly Level / Firm</option>
+            <option value="sloping">Uneven / Sloping</option>
+            <option value="soft">Soft / Made-Up / Uncertain</option>
+          </select>
+        </div>
+
+        <!-- ACCESS -->
+        <div class="cfp-field">
+          <label for="cfp-access">Site Access</label>
+
+          <select id="cfp-access">
+            <option value="clear">Clear Side Access</option>
+            <option value="restricted">Narrow Access / Steps / Obstacles</option>
+            <option value="property">Access Through Property</option>
+            <option value="open">Open Site / Machinery Access</option>
+          </select>
+        </div>
+
+        <!-- BUTTON -->
+        <button
+          type="button"
+          class="cfp-submit"
+          id="cfp-calculate"
+        >
+          View My Foundation Overview
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <p class="cfp-form-note">
+          Instant results. No contact details required.
+        </p>
+
+      </div>
+
+      <!-- GENERATED RESULTS -->
+      <div
+        class="cfp-results"
+        id="cfp-results"
+        hidden
+        aria-live="polite"
+      ></div>
+
+    </div>
+
+  </div>
+</section>
+
+
 
 
 
@@ -488,8 +632,6 @@
 
 
 <div class="head-img-wrapper">
-
-
 
     <div class="head-img">
 
@@ -1517,6 +1659,7 @@ FOOTER
 
 
 <script src="nav.js"></script>
+<script src="/tool.js"></script>
 
 </body>
 
